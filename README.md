@@ -6,10 +6,10 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
 ## Structure du projet
       .
       ├── screenshots/
-      │ ├── docker_build.png
-      │ ├── docker_compose.png
-      │ ├── other_163019.png
-      │ └── vscode_workspace.png
+      │ ├── vscode_workspace.png # Arborescence du projet dans VS Code
+      │ ├── docker_build.png # Dockerfile du backend
+      │ ├── docker_compose.png # Fichier docker-compose.yml
+      │ └── other_163019.png # Page web affichant la liste des produits
       ├── tp_backend/
       │ ├── Dockerfile
       │ ├── api.php
