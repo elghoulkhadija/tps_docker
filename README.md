@@ -15,7 +15,7 @@ Le tout est défini et lancé à l'aide d'un fichier `docker-compose.yml`.
 
 Les images suivantes illustrent la structure et le fonctionnement du projet :
 
-1. **`Capture d’écran 2026-02-28 162804.png`**  
+1. **`<img width="1910" height="1007" alt="Capture d&#39;écran 2026-02-28 162804" src="https://github.com/user-attachments/assets/47d0ed3c-1ee6-4cb0-a848-36598054c80f" />`**  
    Aperçu de l’arborescence du projet et extrait du fichier `docker-compose.yml` (version 3.8, service `web` avec build, ports, dépendance `db`).
 
 2. **`Capture d’écran 2026-02-28 162913.png`**  
