@@ -22,19 +22,31 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
       └── README.md
 
 
+
 ## Captures d’écran
 
-![Arborescence et docker-compose](screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162804.png)
-*Arborescence et extrait docker-compose.yml*
+### Arborescence du projet (VS Code)
+![Arborescence VS Code](screenshots/vscode_workspace.png)
+*Aperçu de l’organisation des fichiers et dossiers dans l’éditeur.*
 
-    ![Dockerfile backend](screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162913.png)
-*Dockerfile du backend (PHP 8.2 + Apache)*
+### Dockerfile du backend
+![Dockerfile](screenshots/docker_build.png)
+*Contenu du `Dockerfile` utilisé pour construire l’image PHP/Apache.*
 
-    ![Images Docker Desktop](screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162947.png)
-*Images construites dans Docker Desktop*
+### Fichier docker-compose.yml
+![docker-compose](screenshots/docker_compose.png)
+*Extrait du fichier de composition décrivant les services `web` et `db`.*
 
-    ![Page d’affichage des produits](screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20163019.png)
-*Rendu de la page web (liste des produits)*
+### Page web des produits
+![Page produits](screenshots/other_163019.png)
+*Rendu de l’application affichant la liste des produits en provenance de la base de données.*
+
+## Installation et exécution
+
+1. **Prérequis** : Docker (version 20.10+) et Docker Compose.
+2. **Lancez les services** :
+   ```bash
+   docker-compose up -d
 
 ## Installation
 
