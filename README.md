@@ -23,26 +23,36 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
 
 
 
-## Captures d’écran
+
 
 
 ## 📸 Captures d’écran
 
-### Environnement de développement (VS Code)
-![Espace de travail VS Code](screenshots/vscode_workspace.png)
-*Aperçu de l’arborescence des fichiers dans Visual Studio Code.*
 
-### Dockerfile du backend
-![Dockerfile](screenshots/docker_build.png)
-*Le Dockerfile utilisé pour construire l’image du service web (PHP 8.2 + Apache).*
+## 📸 Captures d’écran
 
-### Fichier docker-compose
-![docker-compose](screenshots/docker_compose.png)
-*Extrait du fichier `docker-compose.yml` décrivant les services, les ports et les volumes.*
+### 1. Images Docker et conteneurs
+![docker_build](screenshots/docker_build.png)
+*Aperçu de l’interface Docker Desktop montrant les images construites (dont `tp_backend-web` et `mysql:8.0`) et l’état des conteneurs.*
 
-### Page d’affichage des produits
-![Liste des produits](screenshots/other_163019.png)
-*Résultat final : la page web affichant les produits extraits de la base de données.*
+### 2. Dockerfile du backend
+![docker_compose](screenshots/docker_compose.png)
+*Le `Dockerfile` utilisé pour construire l’image du service web (basé sur `php:8.2-apache`).*
+
+### 3. Fichier docker-compose.yml
+![other_163019](screenshots/other_163019.png)
+*Extrait du fichier `docker-compose.yml` définissant les services `web` et `db`, les ports et les volumes.*
+
+### 4. Page d’affichage des produits
+![vscode_workspace](screenshots/vscode_workspace.png)
+*Rendu final de l’application : la liste des produits extraits de la base de données.*
+
+## 🚀 Installation et exécution
+
+1. **Prérequis** : Docker et Docker Compose installés.
+2. **Lancer l’application** :
+   ```bash
+   docker-compose up -d
 
 ## 🚀 Installation et exécution
 
