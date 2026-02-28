@@ -1,71 +1,154 @@
-# TP Docker – Application Web PHP / MySQL
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Docker – Application PHP/MySQL</title>
+    <style>
+        /* Style intégré pour la lisibilité et la présentation */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0d6efd;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .screenshot {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.2s;
+        }
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+        .screenshot p {
+            margin: 10px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #555;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #eaeaea;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .info-box {
+            background: #e7f3ff;
+            border-left: 5px solid #0d6efd;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐳 TP Docker – Application Web PHP / MySQL</h1>
 
-Ce projet est une application web simple qui affiche une liste de produits. Il est conteneurisé avec Docker et utilise Docker Compose pour orchestrer les services backend (PHP/Apache) et base de données (MySQL).
+    <p>Ce projet est une application web simple qui affiche une liste de produits. Il est conteneurisé avec Docker et utilise Docker Compose pour orchestrer les services backend (PHP/Apache) et base de données (MySQL).</p>
 
-## Description
-
-L'application se compose de deux parties principales :
-- **Backend** : serveur Apache avec PHP 8.2, exposant une page `index.html` et des scripts PHP (`api.php`, `config.php`) pour interagir avec la base de données.
-- **Frontend** : feuille de style CSS (`style.css`) pour la présentation des données.
-- **Base de données** : MySQL 8.0, dont les données sont persistées via un volume Docker.
-
-Le tout est défini et lancé à l'aide d'un fichier `docker-compose.yml`.
-
-## Aperçu des captures d'écran partagées
-
-Les images suivantes illustrent la structure et le fonctionnement du projet :
-
-1. **`<img width="1910" height="1007" alt="Capture d&#39;écran 2026-02-28 162804" src="https://github.com/user-attachments/assets/47d0ed3c-1ee6-4cb0-a848-36598054c80f" />`**  
-   Aperçu de l’arborescence du projet et extrait du fichier `docker-compose.yml` (version 3.8, service `web` avec build, ports, dépendance `db`).
-
-2. **docker_build.png**  
-   Contenu du `Dockerfile` pour le backend : image de base `php:8.2-apache`, copie des sources, installation de l’extension `mysql`, exposition du port 80.
-
-3. **`Capture d’écran 2026-02-28 162947.png`**  
-   Interface Docker Desktop montrant les images construites : `tp_backend-web` (récemment créée), `mysql:8.0`, `tp1`, etc.
-
-4. **`Capture d’écran 2026-02-28 163019.png`**  
-   Rendu de la page web affichant la liste des produits (ID, Nom, Prix, Quantité), preuve que l'application fonctionne correctement.
-
-## Structure du projet
+    <h2>📁 Structure du projet</h2>
+    <pre>
 .
+├── screenshots/                 # Dossier contenant les captures d'écran
+│   ├── Capture d’écran 2026-02-28 162804.png
+│   ├── Capture d’écran 2026-02-28 162913.png
+│   ├── Capture d’écran 2026-02-28 162947.png
+│   └── Capture d’écran 2026-02-28 163019.png
 ├── tp_backend/
-│ ├── Dockerfile
-│ ├── api.php
-│ ├── config.php
-│ └── index.html
+│   ├── Dockerfile
+│   ├── api.php
+│   ├── config.php
+│   └── index.html
 ├── tp_frontend/
-│ ├── tp1/ (dossier optionnel, contient probablement d'autres ressources)
-│ └── style.css
+│   ├── tp1/                # (dossier optionnel)
+│   └── style.css
 ├── docker-compose.yml
-└── README.md
+└── README.md                     # Ce fichier
+    </pre>
 
-text
+    <h2>📸 Aperçu des captures d'écran</h2>
+    <p>Les images suivantes illustrent la structure et le fonctionnement du projet. Cliquez sur une image pour l'agrandir (ouvre l'original).</p>
 
-- `tp_backend/` : contient le code PHP et le `Dockerfile` pour construire l'image du serveur web.
-- `tp_frontend/` : contient les fichiers statiques (CSS) côté client.
-- `docker-compose.yml` : décrit les services (`web`, `db`) et les volumes nécessaires.
+    <div class="gallery">
+        <div class="screenshot">
+            <a href="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162804.png" target="_blank">
+                <img src="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162804.png" alt="Arborescence et extrait docker-compose">
+            </a>
+            <p>🔹 Arborescence et extrait docker-compose.yml</p>
+        </div>
+        <div class="screenshot">
+            <a href="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162913.png" target="_blank">
+                <img src="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162913.png" alt="Dockerfile backend">
+            </a>
+            <p>🔹 Dockerfile du backend (PHP 8.2 + Apache)</p>
+        </div>
+        <div class="screenshot">
+            <a href="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162947.png" target="_blank">
+                <img src="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20162947.png" alt="Docker Desktop images">
+            </a>
+            <p>🔹 Images construites dans Docker Desktop</p>
+        </div>
+        <div class="screenshot">
+            <a href="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20163019.png" target="_blank">
+                <img src="screenshots/Capture%20d%E2%80%99%C3%A9cran%202026-02-28%20163019.png" alt="Page d'affichage des produits">
+            </a>
+            <p>🔹 Rendu de la page web (liste des produits)</p>
+        </div>
+    </div>
 
-## Prérequis
+    <h2>🚀 Installation et exécution</h2>
+    <div class="info-box">
+        <strong>Prérequis :</strong> Docker (version 20.10+) et Docker Compose.
+    </div>
+    <ol>
+        <li>Clonez ce dépôt (ou placez les fichiers dans un répertoire).</li>
+        <li>Lancez les services : <code>docker-compose up -d</code></li>
+        <li>Accédez à l'application : <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></li>
+    </ol>
 
-- [Docker](https://www.docker.com/products/docker-desktop) (version 20.10 ou supérieure)
-- [Docker Compose](https://docs.docker.com/compose/) (généralement inclus avec Docker Desktop)
+    <h2>🛠 Détails techniques</h2>
+    <ul>
+        <li><strong>Backend :</strong> image <code>tp_backend-web</code> basée sur <code>php:8.2-apache</code>, avec l'extension <code>mysql</code> (dépréciée ; pensez à migrer vers <code>mysqli</code>).</li>
+        <li><strong>Base de données :</strong> <code>mysql:8.0</code> avec volume persistant <code>db_data</code>.</li>
+        <li><strong>Réseau :</strong> communication via le nom de service <code>db</code>.</li>
+    </ul>
 
-## Installation et exécution
+    <h2>⚠️ Remarques</h2>
+    <ul>
+        <li>Dans le <code>Dockerfile</code>, la ligne <code>COPY tp2/ /var/www/html/</code> devrait probablement être <code>COPY . /var/www/html/</code> (adaptez selon votre structure).</li>
+        <li>Les captures d'écran sont stockées dans le dossier <code>screenshots/</code> à la racine. Pour les visualiser hors ligne, ouvrez simplement ce dossier.</li>
+    </ul>
 
-1. **Cloner le dépôt** (ou placer les fichiers dans un répertoire de travail).
-2. **Lancer les services** avec Docker Compose :
-   ```bash
-   docker-compose up -d
-Cette commande construit l'image du backend (si elle n'existe pas déjà) et démarre les conteneurs web et db en arrière-plan.
-
-Vérifier que les conteneurs tournent :
-
-bash
-docker-compose ps
-Accès à l'application
-Une fois les services démarrés, ouvrez un navigateur et rendez-vous à l'adresse :
-
-text
-http://localhost:8080
-Vous devriez voir la liste des produits (identique à la dernière capture d'écran). La page est servie par Apache depuis le conteneur web.
+    <hr>
+    <p style="text-align: center;">📅 Février 2026 – Travaux pratiques Docker</p>
+</body>
+</html>
