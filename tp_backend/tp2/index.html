@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Liste des Produits</title> 
+    <style> 
+        body { font-family: Arial, sans-serif; margin: 40px; } 
+        table { border-collapse: collapse; width: 60%; margin: auto; } 
+        th, td { border: 1px solid #333; padding: 8px; text-align: center; } 
+        th { background-color: #f2f2f2; } 
+        h1 { text-align: center; } 
+    </style> 
+</head> 
+<body> 
+    <h1>Liste des Produits</h1> 
+    <table id="produitsTable"> 
+        <thead> 
+            <tr> 
+                <th>ID</th> 
+                <th>Nom</th> 
+                <th>Prix</th> 
+                <th>Quantité</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            <!-- Les produits seront ajoutés ici via JS --> 
+        </tbody> 
+    </table> 
+ 
+    <script> 
+        async function fetchProduits() { 
+            try { 
+                const response = await fetch('api.php');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+                }
+                const produits = await response.json();
+
+                const tbody = document.querySelector('#produitsTable tbody'); 
+                tbody.innerHTML = '';
+
+                produits.forEach(p => { 
+                    const row = document.createElement('tr'); 
+                    row.innerHTML = 
+`<td>${p.id}</td><td>${p.nom}</td><td>${p.prix}</td><td>${p.quantite}</td>`; 
+                    tbody.appendChild(row); 
+                }); 
+            } catch (err) { 
+                console.error('Erreur:', err); 
+            } 
+        } 
+ 
+        fetchProduits(); 
+    </script> 
+</body> 
+</html>
