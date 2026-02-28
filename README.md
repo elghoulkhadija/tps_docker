@@ -53,21 +53,6 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
 2. **Lancer l’application** :
    ```bash
    docker-compose up -d
-
-## 🚀 Installation et exécution
-
-1. **Prérequis** : Docker et Docker Compose installés.
-2. **Lancer l’application** :
-   ```bash
-   docker-compose up -d
-   
-## Installation et exécution
-
-1. **Prérequis** : Docker (version 20.10+) et Docker Compose.
-2. **Lancez les services** :
-   ```bash
-   docker-compose up -d
-
 ## Installation
 
 ```bash
