@@ -6,10 +6,10 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
 ## Structure du projet
       .
       ├── screenshots/
-      │ ├── vscode_workspace.png # Arborescence du projet dans VS Code
-      │ ├── docker_build.png # Dockerfile du backend
-      │ ├── docker_compose.png # Fichier docker-compose.yml
-      │ └── other_163019.png # Page web affichant la liste des produits
+      │ ├── docker_build.png
+      │ ├── docker_compose.png
+      │ ├── other_163019.png
+      │ └── vscode_workspace.png
       ├── tp_backend/
       │ ├── Dockerfile
       │ ├── api.php
@@ -25,22 +25,32 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
 
 ## Captures d’écran
 
-### Arborescence du projet (VS Code)
-![Arborescence VS Code](screenshots/vscode_workspace.png)
-*Aperçu de l’organisation des fichiers et dossiers dans l’éditeur.*
+
+## 📸 Captures d’écran
+
+### Environnement de développement (VS Code)
+![Espace de travail VS Code](screenshots/vscode_workspace.png)
+*Aperçu de l’arborescence des fichiers dans Visual Studio Code.*
 
 ### Dockerfile du backend
 ![Dockerfile](screenshots/docker_build.png)
-*Contenu du `Dockerfile` utilisé pour construire l’image PHP/Apache.*
+*Le Dockerfile utilisé pour construire l’image du service web (PHP 8.2 + Apache).*
 
-### Fichier docker-compose.yml
+### Fichier docker-compose
 ![docker-compose](screenshots/docker_compose.png)
-*Extrait du fichier de composition décrivant les services `web` et `db`.*
+*Extrait du fichier `docker-compose.yml` décrivant les services, les ports et les volumes.*
 
-### Page web des produits
-![Page produits](screenshots/other_163019.png)
-*Rendu de l’application affichant la liste des produits en provenance de la base de données.*
+### Page d’affichage des produits
+![Liste des produits](screenshots/other_163019.png)
+*Résultat final : la page web affichant les produits extraits de la base de données.*
 
+## 🚀 Installation et exécution
+
+1. **Prérequis** : Docker et Docker Compose installés.
+2. **Lancer l’application** :
+   ```bash
+   docker-compose up -d
+   
 ## Installation et exécution
 
 1. **Prérequis** : Docker (version 20.10+) et Docker Compose.
