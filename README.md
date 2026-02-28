@@ -18,7 +18,7 @@ Les images suivantes illustrent la structure et le fonctionnement du projet :
 1. **`<img width="1910" height="1007" alt="Capture d&#39;écran 2026-02-28 162804" src="https://github.com/user-attachments/assets/47d0ed3c-1ee6-4cb0-a848-36598054c80f" />`**  
    Aperçu de l’arborescence du projet et extrait du fichier `docker-compose.yml` (version 3.8, service `web` avec build, ports, dépendance `db`).
 
-2. **`Capture d’écran 2026-02-28 162913.png`**  
+2. **docker_build.png**  
    Contenu du `Dockerfile` pour le backend : image de base `php:8.2-apache`, copie des sources, installation de l’extension `mysql`, exposition du port 80.
 
 3. **`Capture d’écran 2026-02-28 162947.png`**  
