@@ -22,13 +22,6 @@ Ce projet est une application web simple qui affiche une liste de produits. Il e
       └── README.md
 
 
-
-
-
-
-## 📸 Captures d’écran
-
-
 ## 📸 Captures d’écran
 
 ### 1. Images Docker et conteneurs
